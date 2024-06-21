@@ -39,6 +39,7 @@
             this.chipherTextBox = new System.Windows.Forms.TextBox();
             this.chipherTextLabel = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.deleteButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -52,7 +53,7 @@
             this.plainInputTextBox.Multiline = true;
             this.plainInputTextBox.Name = "plainInputTextBox";
             this.plainInputTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.plainInputTextBox.Size = new System.Drawing.Size(378, 200);
+            this.plainInputTextBox.Size = new System.Drawing.Size(377, 200);
             this.plainInputTextBox.TabIndex = 0;
             // 
             // encryptButton
@@ -61,7 +62,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.encryptButton.Location = new System.Drawing.Point(3, 591);
             this.encryptButton.Name = "encryptButton";
-            this.encryptButton.Size = new System.Drawing.Size(177, 21);
+            this.encryptButton.Size = new System.Drawing.Size(176, 21);
             this.encryptButton.TabIndex = 1;
             this.encryptButton.Text = "Encrypt";
             this.encryptButton.UseVisualStyleBackColor = true;
@@ -71,7 +72,7 @@
             // 
             this.decryptButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.decryptButton.Location = new System.Drawing.Point(186, 591);
+            this.decryptButton.Location = new System.Drawing.Point(185, 591);
             this.decryptButton.Name = "decryptButton";
             this.decryptButton.Size = new System.Drawing.Size(195, 21);
             this.decryptButton.TabIndex = 2;
@@ -85,7 +86,7 @@
             this.keyTextBox.Location = new System.Drawing.Point(3, 540);
             this.keyTextBox.Multiline = true;
             this.keyTextBox.Name = "keyTextBox";
-            this.keyTextBox.Size = new System.Drawing.Size(378, 45);
+            this.keyTextBox.Size = new System.Drawing.Size(377, 45);
             this.keyTextBox.TabIndex = 4;
             // 
             // plainTextLabel
@@ -114,7 +115,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.53247F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.46753F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 182F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 187F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 188F));
             this.tableLayoutPanel1.Controls.Add(this.keyTextBox, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.encryptionKeyLabel, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.plainInputTextBox, 0, 3);
@@ -125,6 +126,7 @@
             this.tableLayoutPanel1.Controls.Add(this.chipherTextLabel, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.decryptButton, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.button2, 2, 6);
+            this.tableLayoutPanel1.Controls.Add(this.deleteButton, 3, 6);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(31, 23);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 8;
@@ -155,17 +157,17 @@
             this.chipherTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.SetColumnSpan(this.chipherTextBox, 2);
-            this.chipherTextBox.Location = new System.Drawing.Point(387, 314);
+            this.chipherTextBox.Location = new System.Drawing.Point(386, 314);
             this.chipherTextBox.Multiline = true;
             this.chipherTextBox.Name = "chipherTextBox";
             this.chipherTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.chipherTextBox.Size = new System.Drawing.Size(364, 200);
+            this.chipherTextBox.Size = new System.Drawing.Size(365, 200);
             this.chipherTextBox.TabIndex = 7;
             // 
             // chipherTextLabel
             // 
             this.chipherTextLabel.AutoSize = true;
-            this.chipherTextLabel.Location = new System.Drawing.Point(387, 293);
+            this.chipherTextLabel.Location = new System.Drawing.Point(386, 293);
             this.chipherTextLabel.Name = "chipherTextLabel";
             this.chipherTextLabel.Size = new System.Drawing.Size(67, 13);
             this.chipherTextLabel.TabIndex = 8;
@@ -175,12 +177,23 @@
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(387, 591);
+            this.button2.Location = new System.Drawing.Point(386, 591);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(176, 21);
             this.button2.TabIndex = 9;
-            this.button2.Text = "Save";
+            this.button2.Text = "Save Entry";
             this.button2.UseVisualStyleBackColor = true;
+            // 
+            // deleteButton
+            // 
+            this.deleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.deleteButton.Location = new System.Drawing.Point(568, 591);
+            this.deleteButton.Name = "deleteButton";
+            this.deleteButton.Size = new System.Drawing.Size(183, 21);
+            this.deleteButton.TabIndex = 10;
+            this.deleteButton.Text = "Delete Entry";
+            this.deleteButton.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -211,6 +224,7 @@
         private System.Windows.Forms.TextBox chipherTextBox;
         private System.Windows.Forms.Label chipherTextLabel;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button deleteButton;
     }
 }
 

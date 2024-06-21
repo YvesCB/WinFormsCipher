@@ -41,5 +41,6 @@ namespace WinFormsCipher
 
             plainInputTextBox.Text = vigenere.Decrypt(cipherText, key);
         }
+
     }
 }
