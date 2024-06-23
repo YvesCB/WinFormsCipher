@@ -40,6 +40,7 @@
             cipherTextLabel = new System.Windows.Forms.Label();
             saveButton = new System.Windows.Forms.Button();
             deleteButton = new System.Windows.Forms.Button();
+            doubleClickHint = new System.Windows.Forms.Label();
             tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)cipherTable).BeginInit();
             SuspendLayout();
@@ -129,6 +130,7 @@
             tableLayoutPanel1.Controls.Add(decryptButton, 1, 6);
             tableLayoutPanel1.Controls.Add(saveButton, 2, 6);
             tableLayoutPanel1.Controls.Add(deleteButton, 3, 6);
+            tableLayoutPanel1.Controls.Add(doubleClickHint, 0, 1);
             tableLayoutPanel1.Location = new System.Drawing.Point(36, 27);
             tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -206,6 +208,15 @@
             deleteButton.UseVisualStyleBackColor = true;
             deleteButton.Click += deleteButton_Click;
             // 
+            // doubleClickHint
+            // 
+            doubleClickHint.AutoSize = true;
+            doubleClickHint.Location = new System.Drawing.Point(3, 303);
+            doubleClickHint.Name = "doubleClickHint";
+            doubleClickHint.Size = new System.Drawing.Size(177, 15);
+            doubleClickHint.TabIndex = 11;
+            doubleClickHint.Text = "Double click row to retrieve data";
+            // 
             // CipherView
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -236,6 +247,7 @@
         private System.Windows.Forms.Label cipherTextLabel;
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.Button deleteButton;
+        private System.Windows.Forms.Label doubleClickHint;
     }
 }
 
