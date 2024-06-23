@@ -19,19 +19,22 @@ namespace WinFormsCipher
         {
             string plain = "";
 
-            if (key.Length == 0) { return cipherText; }
-
             for (int i = 0; i < cipherText.Length; i++)
             {
                 char cipherChar = cipherText[i];
-                char keyChar = key[i % key.Length];
+                char keyChar = '0';
+
+                if (key.Length > 0)
+                {
+                    keyChar = key[i % key.Length];
+                }
 
                 int ciperIndex = Array.IndexOf(Characters, cipherChar.ToString());
                 int keyIndex = Array.IndexOf(Characters, keyChar.ToString());
 
                 if (ciperIndex == -1 || keyIndex == -1)
                 {
-                    throw new ArgumentException("All characters from the input strings must be in the char array. Cannot parse: " + cipherChar);
+                    throw new ArgumentException("All characters from the input strings must be supportet. Cannot parse: " + cipherChar);
                 }
 
                 int plainIndex = (ciperIndex - keyIndex) % CharLen;
@@ -51,19 +54,22 @@ namespace WinFormsCipher
         {
             string cipher = "";
 
-            if (key.Length == 0) { return plainText; }
-
             for (int i = 0; i < plainText.Length; i++)
-            {
+            {  
                 char plainChar = plainText[i];
-                char keyChar = key[i % key.Length];
+                char keyChar = '0';
+
+                if (key.Length > 0)
+                {
+                    keyChar = key[i % key.Length];
+                }
 
                 int plainIndex = Array.IndexOf(Characters, plainChar.ToString());
                 int keyIndex = Array.IndexOf(Characters, keyChar.ToString());
 
                 if (plainIndex == -1 || keyIndex == -1)
                 {
-                    throw new ArgumentException("All characters from the input strings must be in the char array. Cannot parse: " + plainChar);
+                    throw new ArgumentException("All characters from the input strings must be supported. Cannot parse: " + plainChar);
                 }
 
                 int cipherIndex = (plainIndex + keyIndex) % CharLen;

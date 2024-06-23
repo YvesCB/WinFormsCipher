@@ -42,17 +42,39 @@ namespace WinFormsCipher
 
             Vigenere vigenere = new Vigenere();
 
-            cipherTextBox.Text = vigenere.Encrypt(plainText, key);
+            try
+            {
+                cipherTextBox.Text = vigenere.Encrypt(plainText, key);
+            }
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show(
+                    ex.Message,
+                    "Input Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void decryptButton_Click(object sender, EventArgs e)
         {
             string cipherText = cipherTextBox.Text;
             string key = keyTextBox.Text;
 
             Vigenere vigenere = new Vigenere();
 
-            plainTextBox.Text = vigenere.Decrypt(cipherText, key);
+            try
+            {
+                plainTextBox.Text = vigenere.Decrypt(cipherText, key);
+            }
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show(
+                    ex.Message,
+                    "Input Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
         }
 
         private void saveButton_Click(object sender, EventArgs e)

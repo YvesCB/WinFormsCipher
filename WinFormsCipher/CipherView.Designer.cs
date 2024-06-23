@@ -79,7 +79,7 @@
             decryptButton.TabIndex = 2;
             decryptButton.Text = "Decrypt";
             decryptButton.UseVisualStyleBackColor = true;
-            decryptButton.Click += button1_Click;
+            decryptButton.Click += decryptButton_Click;
             // 
             // keyTextBox
             // 
